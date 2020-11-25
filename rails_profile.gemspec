@@ -1,24 +1,39 @@
-$:.push File.expand_path('lib', __dir__)
-require 'rails_profile/version'
+# -*- encoding: utf-8 -*-
+# stub: rails_profile 0.1.0 ruby lib
 
 Gem::Specification.new do |s|
-  s.name = 'rails_profile'
-  s.version = RailsProfile::VERSION
-  s.authors = ['qinmingyuan']
-  s.email = ['mingyuan0715@foxmail.com']
-  s.homepage = 'https://github.com/work-design/rails_profile'
-  s.summary = ' Summary of RailsProfile.'
-  s.description = ' Description of RailsShip.'
-  s.license = 'LGPL-3.0'
+  s.name = "rails_profile".freeze
+  s.version = "0.1.0"
 
-  s.files = Dir[
-    '{app,config,db,lib}/**/*',
-    'LICENSE',
-    'Rakefile',
-    'README.md'
-  ]
+  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib".freeze]
+  s.authors = ["qinmingyuan".freeze]
+  s.date = "2020-10-29"
+  s.description = " Description of RailsShip.".freeze
+  s.email = ["mingyuan0715@foxmail.com".freeze]
+  s.files = ["LICENSE".freeze, "README.md".freeze, "Rakefile".freeze, "app/controllers/profile".freeze, "app/controllers/profile/admin".freeze, "app/controllers/profile/admin/addresses_controller.rb".freeze, "app/controllers/profile/admin/areas_controller.rb".freeze, "app/controllers/profile/admin/base_controller.rb".freeze, "app/controllers/profile/admin/profiles_controller.rb".freeze, "app/controllers/profile/areas_controller.rb".freeze, "app/controllers/profile/base_controller.rb".freeze, "app/controllers/profile/membership".freeze, "app/controllers/profile/membership/base_controller.rb".freeze, "app/controllers/profile/membership/profiles_controller.rb".freeze, "app/controllers/profile/my".freeze, "app/controllers/profile/my/address_users_controller.rb".freeze, "app/controllers/profile/my/addresses_controller.rb".freeze, "app/controllers/profile/my/base_controller.rb".freeze, "app/controllers/profile/my/profiles_controller.rb".freeze, "app/javascript/packs/controllers/profile".freeze, "app/javascript/packs/controllers/profile/admin".freeze, "app/javascript/packs/controllers/profile/admin/areas".freeze, "app/javascript/packs/controllers/profile/admin/areas/create.js".freeze, "app/javascript/packs/controllers/profile/admin/areas/edit.js".freeze, "app/javascript/packs/controllers/profile/admin/areas/index.js".freeze, "app/javascript/packs/controllers/profile/admin/areas/new.js".freeze, "app/javascript/packs/controllers/profile/admin/areas/update.js".freeze, "app/javascript/packs/controllers/profile/admin/profiles".freeze, "app/javascript/packs/controllers/profile/admin/profiles/edit.js".freeze, "app/javascript/packs/controllers/profile/admin/profiles/new.js".freeze, "app/javascript/packs/controllers/profile/my".freeze, "app/javascript/packs/controllers/profile/my/profiles".freeze, "app/javascript/packs/controllers/profile/my/profiles/edit.js".freeze, "app/javascript/packs/controllers/profile/my/profiles/new.js".freeze, "app/javascript/stylesheets/controllers".freeze, "app/javascript/stylesheets/controllers/profile".freeze, "app/javascript/stylesheets/controllers/profile/my".freeze, "app/javascript/stylesheets/controllers/profile/my/profiles".freeze, "app/javascript/stylesheets/controllers/profile/my/profiles/index.css".freeze, "app/models/address.rb".freeze, "app/models/address_user.rb".freeze, "app/models/area.rb".freeze, "app/models/profile.rb".freeze, "app/models/rails_profile".freeze, "app/models/rails_profile/account.rb".freeze, "app/models/rails_profile/address.rb".freeze, "app/models/rails_profile/address_user.rb".freeze, "app/models/rails_profile/area.rb".freeze, "app/models/rails_profile/area_hierarchy.rb".freeze, "app/models/rails_profile/profile.rb".freeze, "app/models/rails_profile/user.rb".freeze, "app/models/user.rb".freeze, "app/views/application/_profile_nav.html.erb".freeze, "app/views/my/_profile_nav.html.erb".freeze, "app/views/profile".freeze, "app/views/profile/admin".freeze, "app/views/profile/admin/addresses".freeze, "app/views/profile/admin/addresses/_address.html.erb".freeze, "app/views/profile/admin/addresses/_edit.html.erb".freeze, "app/views/profile/admin/addresses/_form.html.erb".freeze, "app/views/profile/admin/addresses/_new.html.erb".freeze, "app/views/profile/admin/addresses/create.js.erb".freeze, "app/views/profile/admin/addresses/edit.js.erb".freeze, "app/views/profile/admin/addresses/index.html.erb".freeze, "app/views/profile/admin/addresses/new.js.erb".freeze, "app/views/profile/admin/addresses/show.html.erb".freeze, "app/views/profile/admin/addresses/update.js.erb".freeze, "app/views/profile/admin/areas".freeze, "app/views/profile/admin/areas/_filter.html.erb".freeze, "app/views/profile/admin/areas/_form.html.erb".freeze, "app/views/profile/admin/areas/index.html.erb".freeze, "app/views/profile/admin/areas/show.html.erb".freeze, "app/views/profile/admin/profiles".freeze, "app/views/profile/admin/profiles/_filter.html.erb".freeze, "app/views/profile/admin/profiles/_form.html.erb".freeze, "app/views/profile/admin/profiles/_profile.json.jbuilder".freeze, "app/views/profile/admin/profiles/_show_table.html.erb".freeze, "app/views/profile/admin/profiles/index.html.erb".freeze, "app/views/profile/admin/profiles/qrcode.js.erb".freeze, "app/views/profile/admin/profiles/qrcode.json.jbuilder".freeze, "app/views/profile/admin/profiles/user.js.erb".freeze, "app/views/profile/areas".freeze, "app/views/profile/areas/index.js+phone.erb".freeze, "app/views/profile/areas/index.json.jbuilder".freeze, "app/views/profile/membership".freeze, "app/views/profile/membership/profiles".freeze, "app/views/profile/membership/profiles/_form.html.erb".freeze, "app/views/profile/membership/profiles/_profile.json.jbuilder".freeze, "app/views/profile/membership/profiles/edit.html.erb".freeze, "app/views/profile/membership/profiles/edit.js.erb".freeze, "app/views/profile/membership/profiles/new.js.erb".freeze, "app/views/profile/membership/profiles/show.html.erb".freeze, "app/views/profile/membership/profiles/show.json.jbuilder".freeze, "app/views/profile/my".freeze, "app/views/profile/my/addresses".freeze, "app/views/profile/my/addresses/_edit.html.erb".freeze, "app/views/profile/my/addresses/_filter.html.erb".freeze, "app/views/profile/my/addresses/_form.html+phone.erb".freeze, "app/views/profile/my/addresses/_form.html.erb".freeze, "app/views/profile/my/addresses/_new.html.erb".freeze, "app/views/profile/my/addresses/_show_table.html+phone.erb".freeze, "app/views/profile/my/addresses/_show_table.html.erb".freeze, "app/views/profile/my/addresses/fork.js.erb".freeze, "app/views/profile/my/addresses/index.html+phone.erb".freeze, "app/views/profile/my/addresses/index.html.erb".freeze, "app/views/profile/my/addresses/show.html+phone.erb".freeze, "app/views/profile/my/addresses/show.html.erb".freeze, "app/views/profile/my/profiles".freeze, "app/views/profile/my/profiles/_form.html.erb".freeze, "app/views/profile/my/profiles/_profile.json.jbuilder".freeze, "app/views/profile/my/profiles/edit.html.erb".freeze, "app/views/profile/my/profiles/edit.js.erb".freeze, "app/views/profile/my/profiles/index.html+phone.erb".freeze, "app/views/profile/my/profiles/index.html.erb".freeze, "app/views/profile/my/profiles/index.json.jbuilder".freeze, "app/views/profile/my/profiles/new.js.erb".freeze, "app/views/profile/my/profiles/show.html.erb".freeze, "app/views/profile/my/profiles/show.json.jbuilder".freeze, "config/locales/en.enum.yml".freeze, "config/locales/zh.attributes.yml".freeze, "config/locales/zh.controller.yml".freeze, "config/locales/zh.enum.yml".freeze, "config/routes.rb".freeze, "lib/rails_profile".freeze, "lib/rails_profile.rb".freeze, "lib/rails_profile/config.rb".freeze, "lib/rails_profile/engine.rb".freeze, "lib/rails_profile/version.rb".freeze]
+  s.homepage = "https://github.com/work-design/rails_profile".freeze
+  s.licenses = ["LGPL-3.0".freeze]
+  s.rubygems_version = "2.7.7".freeze
+  s.summary = "Summary of RailsProfile.".freeze
 
-  s.add_dependency 'rails_com', '~> 1.2'
-  s.add_dependency 'rails_taxon'
-  s.add_development_dependency 'sqlite3'
+  s.installed_by_version = "2.7.7" if s.respond_to? :installed_by_version
+
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<rails_com>.freeze, ["~> 1.2"])
+      s.add_runtime_dependency(%q<rails_taxon>.freeze, [">= 0"])
+      s.add_development_dependency(%q<sqlite3>.freeze, [">= 0"])
+    else
+      s.add_dependency(%q<rails_com>.freeze, ["~> 1.2"])
+      s.add_dependency(%q<rails_taxon>.freeze, [">= 0"])
+      s.add_dependency(%q<sqlite3>.freeze, [">= 0"])
+    end
+  else
+    s.add_dependency(%q<rails_com>.freeze, ["~> 1.2"])
+    s.add_dependency(%q<rails_taxon>.freeze, [">= 0"])
+    s.add_dependency(%q<sqlite3>.freeze, [">= 0"])
+  end
 end
